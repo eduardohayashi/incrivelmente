@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Playfair+Display:ital,wght@0,500;0,600;1,500;1,600&display=swap');
+
+:root { --ink: #1e1c38; --paper: #fff8ed; --pink: #ff5c88; --coral: #ff8c73; --blue: #6e9df8; --yellow: #f8d75b; }
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; }
+main { overflow: hidden; }
+.topbar { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: auto; padding: 28px 42px; position: relative; z-index: 2; }
+.brand { color: var(--ink); font-size: 1.3rem; font-weight: 700; letter-spacing: -.07em; text-decoration: none; }
+.brand span { color: var(--pink); }
+.tiny-link { color: var(--ink); font: 500 .75rem 'DM Mono', monospace; text-decoration: none; border-bottom: 1px solid var(--ink); padding-bottom: 3px; }
+.hero { background: var(--pink); min-height: 605px; margin-top: -84px; padding: 180px 42px 85px; position: relative; isolation: isolate; }
+.hero > *:not(.orb) { max-width: 1200px; margin-left: auto; margin-right: auto; position: relative; z-index: 1; }
+.eyebrow { font: 500 .69rem 'DM Mono', monospace; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 25px; }
+.hero .eyebrow { color: #fff9ec; }
+h1 { color: #fff9ec; font-size: clamp(5.5rem, 14vw, 12rem); letter-spacing: -.095em; line-height: .72; margin: 0; max-width: 920px; }
+h1 em { font-family: 'Playfair Display', serif; font-weight: 500; letter-spacing: -.12em; }
+.intro { color: #fff9ec; font-size: clamp(1.05rem, 2vw, 1.35rem); line-height: 1.35; margin-top: 48px; }
+.button { background: var(--ink); color: #fff9ec; display: inline-flex; gap: 28px; align-items: center; border-radius: 999px; padding: 16px 22px; font-size: .92rem; font-weight: 500; text-decoration: none; margin-top: 23px; transition: transform .2s ease, background .2s ease; }
+.button:hover { background: #363356; transform: translateY(-3px); }
+.button span { font-size: 1.2rem; }
+.orb { position: absolute; border-radius: 50%; z-index: 0; }
+.orb-one { width: 240px; height: 240px; background: var(--yellow); right: 11%; top: 150px; }
+.orb-two { width: 68px; height: 68px; background: var(--blue); right: 30%; top: 395px; }
+.scribble { color: #fff9ec; font-size: 3.5rem; position: absolute !important; right: 11%; bottom: 74px; transform: rotate(12deg); }
+.thoughts { background: var(--ink); display: grid; grid-template-columns: repeat(3, 1fr); padding: 28px max(42px, calc((100% - 1200px) / 2)); gap: 25px; }
+.thought { aspect-ratio: 1.35; border-radius: 3px; display: flex; flex-direction: column; justify-content: space-between; padding: 25px; transform: rotate(var(--tilt)); }
+.thought:nth-child(1) { --tilt: -2.5deg; }.thought:nth-child(2) { --tilt: 1.5deg; }.thought:nth-child(3) { --tilt: -1deg; }
+.thought p { font: 500 clamp(1.15rem, 2.1vw, 1.65rem)/1.05 'Playfair Display', serif; margin: 18px 0; max-width: 260px; }
+.number { font: .64rem 'DM Mono', monospace; }.mark { align-self: flex-end; font-size: 2rem; }
+.peach { background: var(--coral); }.blue { background: var(--blue); }.yellow { background: var(--yellow); }
+.manifesto { max-width: 1200px; margin: auto; padding: 145px 42px 125px; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+.manifesto .eyebrow { color: var(--pink); }.manifesto h2 { font-size: clamp(3.7rem, 7vw, 6.3rem); letter-spacing: -.09em; line-height: .85; margin: 0; }.manifesto h2::first-line { font-family: 'Playfair Display', serif; font-style: italic; font-weight: 500; }
+.manifesto-copy { font-size: clamp(1.25rem, 2vw, 1.65rem); line-height: 1.26; padding-top: 55px; }.manifesto-copy p { margin: 0 0 27px; }.manifesto-copy strong { font-weight: 500; background: var(--yellow); padding: 0 .09em; }
+.handwritten { color: var(--pink); font: 500 1.2rem/1.2 'Playfair Display', serif; font-style: italic; margin-top: 52px !important; }.handwritten span { color: var(--coral); }
+.footer-note { background: var(--blue); padding: 46px max(42px, calc((100% - 1200px) / 2)); display: flex; justify-content: space-between; align-items: flex-end; }.footer-note p { margin: 0; font: 500 clamp(1.25rem, 2vw, 1.7rem)/1.1 'Playfair Display', serif; }.footer-note a { color: var(--ink); font: 2rem 'DM Mono', monospace; text-decoration: none; }
+@media (max-width: 650px) { .topbar { padding: 22px 23px; }.hero { min-height: 570px; padding: 160px 23px 65px; }.orb-one { width: 145px; height: 145px; right: -25px; top: 105px; }.orb-two { right: 25%; top: 300px; }.scribble { right: 10%; bottom: 50px; }.thoughts { grid-template-columns: 1fr; padding: 26px 23px; }.thought { aspect-ratio: 1.65; }.manifesto { grid-template-columns: 1fr; padding: 90px 23px; }.manifesto-copy { padding-top: 5px; }.footer-note { padding: 35px 23px; } }
